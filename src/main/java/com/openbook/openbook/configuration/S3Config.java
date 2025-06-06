@@ -9,7 +9,9 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
+@Profile(value = "cloud")
 @Configuration
 public class S3Config {
     @Value("${aws.s3.accessKey}")
